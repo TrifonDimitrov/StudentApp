@@ -20,7 +20,7 @@ pipeline {
     }
 
     post {
-        alwais {
+        always {
             echo 'Pipelene completed'
         }
         success {
