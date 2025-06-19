@@ -22,6 +22,12 @@ pipeline {
                 bat 'npm audit'
             }
         }
+        stage('Deploy to Render') {
+            steps {
+                input message: 'Approve deployment?', ok: 'Deploy'
+                bat 'echo Deploying application...'
+            }
+        }
     }
 
     post {
